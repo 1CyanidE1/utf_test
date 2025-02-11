@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "food_service.apps.FoodServiceConfig"
+    "food_service.apps.FoodServiceConfig",
+    'rest_framework',
+    'model_utils'
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,13 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}
+
 
 WSGI_APPLICATION = 'utf_test.wsgi.application'
 
