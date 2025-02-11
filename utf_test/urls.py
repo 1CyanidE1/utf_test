@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from food_service.views import FoodListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/foods/', FoodListView.as_view(), name='food-list'),
 ]
